@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Lockers - Secure Storage Solutions</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/notifications.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" aria-label="Home">
+                        <img src="images/logo.svg" alt="Logo" class="logo-svg">
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="pages/contacts.html">Contacts</a></li>
+                        <li><a href="pages/lockers.html">Lockers</a></li>
+                    </ul>
+                    <button class="login-button" id="loginButton">
+                        <i class="fas fa-user"></i>
+                        <span>Login</span>
+                    </button>
+                    <label for="themeToggle" class="themeToggle st-sunMoonThemeToggleBtn" type="checkbox">
+                        <input type="checkbox" id="themeToggle" class="themeToggleInput" />
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" stroke="none">
+                            <mask id="moon-mask">
+                                <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                                <circle cx="11" cy="3" r="8" fill="black"></circle>
+                            </mask>
+                            <circle class="sunMoon" cx="10" cy="10" r="8" mask="url(#moon-mask)"></circle>
+                            <g>
+                                <circle class="sunRay sunRay1" cx="18" cy="10" r="1.5"></circle>
+                                <circle class="sunRay sunRay2" cx="14" cy="16.928" r="1.5"></circle>
+                                <circle class="sunRay sunRay3" cx="6" cy="16.928" r="1.5"></circle>
+                                <circle class="sunRay sunRay4" cx="2" cy="10" r="1.5"></circle>
+                                <circle class="sunRay sunRay5" cx="6" cy="3.1718" r="1.5"></circle>
+                                <circle class="sunRay sunRay6" cx="14" cy="3.1718" r="1.5"></circle>
+                            </g>
+                        </svg>
+                    </label>
+                    <div class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="wave-container">
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+                <div class="wave-curve"></div>
+                <div class="wave-curve"></div>
+                <div class="wave-curve"></div>
+                <div class="glow-point"></div>
+                <div class="glow-point"></div>
+                <div class="glow-point"></div>
+                <div class="glow-point"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Student Lockers</h1>
+                    <p>Secure storage solutions for your belongings</p>
+                    <a href="pages/lockers.html" class="cta-button">Find Available Lockers</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2>Our Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Secure Storage</h3>
+                        <p>State-of-the-art digital locks for maximum security</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>USB Charging</h3>
+                        <p>Built-in USB ports to charge your devices</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>24/7 Access</h3>
+                        <p>Access your belongings any time you need</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title animate-fadeInUp">How It Works</h2>
+                <div class="steps-container">
+                    <div class="step animate-fadeInLeft delay-100">
+                        <div class="step-number">1</div>
+                        <i class="fas fa-search animate-rotate"></i>
+                        <h3>Find Available Lockers</h3>
+                        <p>Browse our selection of available lockers</p>
+                    </div>
+                    <div class="step animate-fadeInUp delay-200">
+                        <div class="step-number">2</div>
+                        <i class="fas fa-key animate-rotate"></i>
+                        <h3>Choose Your Locker</h3>
+                        <p>Select the size and location that suits you</p>
+                    </div>
+                    <div class="step animate-fadeInRight delay-300">
+                        <div class="step-number">3</div>
+                        <i class="fas fa-lock animate-rotate"></i>
+                        <h3>Secure Your Items</h3>
+                        <p>Store your belongings safely</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Users Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h3>John Smith</h3>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">Perfect solution for storing my books and laptop between classes. The USB charging feature is a game-changer!</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h3>Emma Davis</h3>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">I love how secure and convenient these lockers are. The 24/7 access really helps with my late-night study sessions.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h3>Michael Chen</h3>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">The digital locks are so easy to use, and the location is perfect. No more carrying heavy books around campus!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container animate-fadeInUp">
+                <h2>Ready to Get Started?</h2>
+                <p>Find your perfect locker today</p>
+                <a href="pages/lockers.html" class="cta-button view-lockers">
+                    <i class="fas fa-box-open"></i>
+                    VIEW AVAILABLE LOCKERS
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section animate-fadeInLeft delay-100">
+                    <h3>Contact Info</h3>
+                    <p>Email: r22vs@riga.lv</p>
+                    <p>Phone: +371 67043419</p>
+                    <p>Address: Bruņinieku iela 10, Rīga</p>
+                </div>
+                <div class="footer-section animate-fadeInUp delay-200">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/contacts.html">Contacts</a></li>
+                        <li><a href="pages/lockers.html">Lockers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section animate-fadeInRight delay-300">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="animate-float"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="animate-float delay-100"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="animate-float delay-200"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom animate-fadeInUp delay-400">
+                <p>© 2025 Lockers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="image-modal">
+        <div class="modal-content">
+            <img src="" alt="Увеличенное изображение" class="modal-image">
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-button active" data-tab="login">Login</button>
+                <button class="tab-button" data-tab="register">Register</button>
+            </div>
+            
+            <form id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+            </form>
+
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+            </form>
+
+            <div class="modal-footer">
+                <button type="submit" class="cta-button" id="loginSubmitBtn" style="display:none">Login</button>
+                <button type="submit" class="cta-button" id="registerSubmitBtn" style="display:none">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/home.js"></script>
+    <script src="js/notifications.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginButton = document.getElementById('loginButton');
+            const loginModal = document.getElementById('loginModal');
+            const closeButton = loginModal.querySelector('.close');
+            const tabButtons = loginModal.querySelectorAll('.tab-button');
+            const authForms = loginModal.querySelectorAll('.auth-form');
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const loginSubmitBtn = document.getElementById('loginSubmitBtn');
+            const registerSubmitBtn = document.getElementById('registerSubmitBtn');
+
+            // Открытие модального окна
+            loginButton.addEventListener('click', () => {
+                loginModal.style.display = 'block';
+                setTimeout(() => loginModal.classList.add('active'), 10);
+                // Показываем только нужную кнопку
+                if (loginForm.classList.contains('active')) {
+                    loginSubmitBtn.style.display = '';
+                    registerSubmitBtn.style.display = 'none';
+                } else {
+                    loginSubmitBtn.style.display = 'none';
+                    registerSubmitBtn.style.display = '';
+                }
+            });
+
+            // Закрытие модального окна
+            closeButton.addEventListener('click', () => {
+                loginModal.classList.remove('active');
+                setTimeout(() => loginModal.style.display = 'none', 300);
+            });
+
+            // Закрытие по клику вне модального окна
+            window.addEventListener('click', (e) => {
+                if (e.target === loginModal) {
+                    loginModal.classList.remove('active');
+                    setTimeout(() => loginModal.style.display = 'none', 300);
+                }
+            });
+
+            // Переключение между вкладками
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    authForms.forEach(form => form.classList.remove('active'));
+                    
+                    button.classList.add('active');
+                    const formId = button.dataset.tab + 'Form';
+                    document.getElementById(formId).classList.add('active');
+                    // Показываем только нужную кнопку
+                    if (formId === 'loginForm') {
+                        loginSubmitBtn.style.display = '';
+                        registerSubmitBtn.style.display = 'none';
+                    } else {
+                        loginSubmitBtn.style.display = 'none';
+                        registerSubmitBtn.style.display = '';
+                    }
+                });
+            });
+
+            // Обработка формы входа
+            loginSubmitBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('loginEmail').value;
+                const password = document.getElementById('loginPassword').value;
+
+                // Валидация формы входа
+                if (!email || !password) {
+                    showNotification('error', 'Please fill in all fields');
+                    return;
+                }
+
+                // Валидация email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showNotification('error', 'Please enter a valid email address');
+                    return;
+                }
+
+                // Имитация входа
+                setTimeout(() => {
+                    showNotification('success', 'Successfully logged in!');
+                    loginModal.classList.remove('active');
+                    setTimeout(() => loginModal.style.display = 'none', 300);
+                }, 1000);
+            });
+
+            // Обработка формы регистрации
+            registerSubmitBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('registerName').value;
+                const email = document.getElementById('registerEmail').value;
+                const password = document.getElementById('registerPassword').value;
+
+                // Валидация формы регистрации
+                if (!name || !email || !password) {
+                    showNotification('error', 'Please fill in all fields');
+                    return;
+                }
+
+                // Валидация email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showNotification('error', 'Please enter a valid email address');
+                    return;
+                }
+
+                // Валидация пароля (минимум 6 символов)
+                if (password.length < 6) {
+                    showNotification('error', 'Password must be at least 6 characters long');
+                    return;
+                }
+
+                // Имитация регистрации
+                setTimeout(() => {
+                    showNotification('success', 'Registration successful! Welcome to our service.');
+                    loginModal.classList.remove('active');
+                    setTimeout(() => loginModal.style.display = 'none', 300);
+                }, 1000);
+            });
+        });
+
+        // Локальная функция уведомлений только для логина/регистрации
+        function showNotification(type, message) {
+            let notificationContainer = document.querySelector('.notification-container');
+            if (!notificationContainer) {
+                notificationContainer = document.createElement('div');
+                notificationContainer.className = 'notification-container';
+                document.body.appendChild(notificationContainer);
+            }
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            const icon = type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation';
+            notification.innerHTML = `
+                <i class=\"fas ${icon}\"></i>
+                <span>${message}</span>
+                <div class=\"progress\"></div>
+            `;
+            notificationContainer.appendChild(notification);
+            requestAnimationFrame(() => {
+                notification.classList.add('show');
+            });
+            const timeout = setTimeout(() => {
+                notification.classList.add('hide');
+                setTimeout(() => {
+                    notification.remove();
+                    if (notificationContainer.children.length === 0) {
+                        notificationContainer.remove();
+                    }
+                }, 400);
+            }, 3000);
+            notification.addEventListener('click', () => {
+                clearTimeout(timeout);
+                notification.classList.add('hide');
+                setTimeout(() => {
+                    notification.remove();
+                    if (notificationContainer.children.length === 0) {
+                        notificationContainer.remove();
+                    }
+                }, 400);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+.login-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    margin-right: 16px;
+    box-shadow: 0 2px 8px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.login-button:hover {
+    background: var(--primary-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--primary-color-rgb), 0.4);
+}
+
+.login-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.login-button i {
+    font-size: 16px;
+}
+
+/* Auth Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--background-color);
+    margin: 10% auto;
+    padding: 2.5rem 2.5rem 5.5rem 2.5rem;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border-color);
+    max-height: 80vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    overflow: hidden;
+}
+
+/* Скрыть стандартный скроллбар для красоты */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 8px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+.modal.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+}
+
+.close:hover {
+    color: var(--primary-color);
+    background: var(--hover-color);
+    transform: rotate(90deg);
+}
+
+.auth-tabs {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.tab-button::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    border-radius: 3px;
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+}
+
+.tab-button.active::after {
+    transform: scaleX(1);
+}
+
+.auth-form {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.auth-form.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--input-background);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.auth-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(var(--primary-color-rgb), 0.1);
+    background: var(--background-color);
+}
+
+.auth-form .cta-button {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(var(--primary-color-rgb), 0.3);
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    margin-bottom: 0;
+}
+
+.auth-form .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(var(--primary-color-rgb), 0.4);
+}
+
+.auth-form .cta-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(var(--primary-color-rgb), 0.3);
+}
+
+/* Notification styles */
+/* УДАЛЕНО: все стили .notification и .notification-container */
+
+.modal-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, var(--background-color) 90%, transparent);
+    padding: 1.2rem 2.5rem 1.2rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    box-sizing: border-box;
+    border-radius: 0 0 16px 16px;
+}
+
+.modal-footer .cta-button {
+    margin: 0;
+    box-shadow: 0 2px 6px rgba(var(--primary-color-rgb), 0.10);
+    min-width: 140px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .login-button span {
+        display: none;
+    }
+    
+    .login-button {
+        padding: 8px;
+        margin-right: 8px;
+    }
+    
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+        padding: 1.5rem 1.5rem 5.5rem 1.5rem;
+    }
+
+    .auth-tabs {
+        gap: 1rem;
+    }
+
+    .tab-button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .modal-footer {
+        padding: 1rem 1.5rem;
+    }
+} 
